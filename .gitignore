@@ -1,7 +1,16 @@
-.venv/
+# Robot Framework Reports
+reports/
+log.html
+report.html
+output.xml
+
+# Browser logs
+*.log
+
+# Python
 __pycache__/
 *.pyc
 
-output.xml
-log.html
-report.html
+# Virtual Environment
+.venv/
+venv/
