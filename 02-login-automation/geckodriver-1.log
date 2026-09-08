@@ -1,0 +1,25 @@
+1788882868917	geckodriver	INFO	Listening on 127.0.0.1:58453
+1788882872020	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "58454" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\Pongo\\AppData\\Local\\Temp\\rust_mozprofileCIZY0S"
+Dynamically enable window occlusion 0
+1788882872643	Marionette	INFO	Marionette enabled
+1788882872958	Marionette	INFO	Listening on port 58466
+WebDriver BiDi listening on ws://127.0.0.1:58454
+Read port: 58466
+1788882873146	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+[ERROR shell_windows::limited_access_features] Error generating feature token: NS_ERROR_FAILURE
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+[ERROR shell_windows::taskbar::shortcut] Error matching shortcut: Error { code: HRESULT(0x80004005), message: "Unspecified error" }
+console.error: "Experiment desktop-release-rollout-show-relay-to-all-browsers-next-sign-up-modal-cta has unknown featureId: email-autocomplete-relay"
+console.error: "Experiment visual-card-updates has unknown featureId: newtabRefinedCardsLayout"
+console.error: "Experiment enable-nimbus-unenrollment-synchronization has unknown featureId: nimbusStore"
+console.error: "Experiment private-window-visual-refresh-design-change-only has unknown featureId: feltPrivacy"
+[WARN  glean_core::upload] Attempted to enqueue a duplicate ping ef0074d1-ef01-4cf7-9228-58d0ffe23ea8 at /submit/firefox-crashreporter/deletion-request/1/ef0074d1-ef01-4cf7-9228-58d0ffe23ea8.
+1788882959678	Marionette	INFO	Stopped listening on port 58466
+JavaScript error: resource://gre/modules/PrivateBrowsingUtils.sys.mjs, line 50: TypeError: can't access property "QueryInterface", aWindow.docShell is null
+Dynamically enable window occlusion 1
