@@ -1,35 +1,79 @@
 *** Settings ***
 
 Library    SeleniumLibrary
-
+Resource   ../variables/login_data.robot
+Resource   ../locators/login_locators.robot
+Resource   ../variables/environment.robot
 
 *** Keywords ***
 
 Open Login Page
 
-    Open Browser  https://www.google.com  chrome
+    Open Browser  ${LOGIN_URL}  chrome
 
     Maximize Browser Window
 
 
 Input Valid Email
 
-    Log    Input Email ${VALID_EMAIL}
+    Input Text
+    ...    ${EMAIL_FIELD}
+    ...    ${VALID_EMAIL}
 
+Input Invalid Email
 
+    Input Text 
+    ...    ${EMAIL_FIELD}
+    ...    ${INVALID_EMAIL}
+
+Input Empty Email
+
+    Input Text
+    ...   ${EMAIL_FIELD}
+    ...   ${EMPTY_EMAIL}
 
 Input Valid Password
 
-    Log    Input Password
+    Input Text
+    ...    ${PASSWORD_FIELD}
+    ...    ${VALID_PASSWORD}
 
+
+Input Invalid Password
+
+    Input Text  
+    ...    ${PASSWORD_FIELD}
+    ...    ${INVALID_PASSWORD} 
+
+Input Empty Password
+
+    Input Text
+    ...    ${PASSWORD_FIELD}
+    ...    ${EMPTY_PASSWORD}
 
 
 Click Login Button
 
-    Log    Click Login Button
-
+    Click Element
+    ...    ${LOGIN_BUTTON}
 
 
 Verify Dashboard
 
-    Log    Verify Dashboard Page
+    Capture Page Screenshot
+
+     Wait Until Location Contains
+    ...    ${DASHBOARD_URL}
+    ...    10s
+
+
+Verify Login Failed
+
+
+    Wait Until Page Contains
+    ...    Invalid Credential
+    ...    10s
+
+    Capture Page Screenshot
+
+    

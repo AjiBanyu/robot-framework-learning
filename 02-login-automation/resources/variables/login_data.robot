@@ -1,16 +1,18 @@
 *** Variables ***
 
-${VALID_EMAIL}
-...    aji.banyu@starasia.tech
+${LOGIN_URL}  https://account.starasia.tech/?clientId=APP-20251ZXsevfVyd&logout=true
+
+${VALID_EMAIL}  
+...   aji.banyu@starasia.tech
+${VALID_PASSWORD}  
+...    $Qwerty1233456789#
 
 
-${VALID_PASSWORD}
-...    SQwerty123456789#
 
-
-${INVALID_PASSWORD}
+${INVALID_EMAIL}  
+...    ajiBanyu@yahoo.com
+${INVALID_PASSWORD}  
 ...    aji123ganteng
 
-
-${INVALID_EMAIL}
-...    ajiBanyu@yahoo.com
+${EMPTY_EMAIL} 
+${EMPTY_PASSWORD}
