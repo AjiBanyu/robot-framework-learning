@@ -1,9 +1,9 @@
 #credential user valid untuk melakukan authentication
 #"Apakah credential tersebut dikenali/valid untuk login?"
 #Contoh:
-Email tidak terdaftar
-Password salah
-Email + password tidak cocok
+        * Email tidak terdaftar
+        * Password salah
+        * Email + password tidak cocok
 
 *** Settings ***
 Resource  ../../resources/pages/login_page.robot

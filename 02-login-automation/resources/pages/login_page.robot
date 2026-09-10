@@ -4,6 +4,8 @@ Library  SeleniumLibrary
 Resource  ../locators/login_locators.robot
 Resource  ../variables/login_data.robot
 Resource  ../variables/environment.robot
+Resource  ../locators/forgot_password_locators.robot
+Resource  ../locators/register_locators.robot
 
 *** Keywords ***
 
@@ -23,11 +25,17 @@ Input Password
 
 Click Forgot Password
 
-    Click Element    ${FORGOT_PASSWORD}
-    
+    Click Element    ${FORGOT_PASSWORD}    
+
+
 Click Login Button
 
     Click Element   ${LOGIN_BUTTON}
+
+
+Click Registration Button
+
+    Click Element   ${CREATE_ACCOUNT_BUTTON}
 
 
 Verify Dashboard
