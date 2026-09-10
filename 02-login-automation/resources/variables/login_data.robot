@@ -2,9 +2,9 @@
 
 ${LOGIN_URL}  https://account.starasia.tech/?clientId=APP-20251ZXsevfVyd&logout=true
 
-${VALID_EMAIL}  
+${EMAIL}  
 ...   aji.banyu@starasia.tech
-${VALID_PASSWORD}  
+${PASSWORD}  
 ...    $Qwerty1233456789#
 
 
