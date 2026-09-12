@@ -1,0 +1,49 @@
+[1mdiff --git a/02-login-automation/resources/pages/login_page.robot b/02-login-automation/resources/pages/login_page.robot[m
+[1mindex 8516065..a815af1 100644[m
+[1m--- a/02-login-automation/resources/pages/login_page.robot[m
+[1m+++ b/02-login-automation/resources/pages/login_page.robot[m
+[36m@@ -33,10 +33,6 @@[m [mClick Login Button[m
+     Click Element   ${LOGIN_BUTTON}[m
+ [m
+ [m
+[31m-Click Registration Button[m
+[31m-[m
+[31m-    Click Element   ${CREATE_ACCOUNT_BUTTON}[m
+[31m-[m
+ [m
+ Verify Dashboard[m
+ [m
+[1mdiff --git a/02-login-automation/tests/authentication/login_validation.robot b/02-login-automation/tests/authentication/login_validation.robot[m
+[1mindex 36a6654..a2f93cd 100644[m
+[1m--- a/02-login-automation/tests/authentication/login_validation.robot[m
+[1m+++ b/02-login-automation/tests/authentication/login_validation.robot[m
+[36m@@ -4,29 +4,6 @@[m [mResource  ../../resources/pages/login_page.robot[m
+ [m
+ *** Test Cases ***[m
+ [m
+[31m-#Login dengan password salah, email valid[m
+[31m-TS-LOGIN-002 Invalid Password[m
+[31m-[m
+[31m-    [Tags]    negative[m
+[31m-[m
+[31m-    Open Login Page[m
+[31m-    Input Email        ${VALID_EMAIL}[m
+[31m-    Input Password     ${INVALID_PASSWORD}[m
+[31m-    Click Login Button[m
+[31m-    Verify Login Failed[m
+[31m-[m
+[31m-[m
+[31m-#Login dengan email salah, password valid[m
+[31m-TS-LOGIN-003 Invalid Email[m
+[31m-[m
+[31m-    [Tags]    negative[m
+[31m-[m
+[31m-    Open Login Page[m
+[31m-    Input Email        ${INVALID_EMAIL}[m
+[31m-    Input Password     ${VALID_PASSWORD}[m
+[31m-    Click Login Button[m
+[31m-    Verify Login Failed[m
+[31m-[m
+ [m
+ #Login tanpa email dan password[m
+ TS-LOGIN-004 Empty Email and Password[m

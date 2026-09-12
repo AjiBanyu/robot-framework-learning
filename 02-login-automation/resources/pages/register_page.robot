@@ -53,3 +53,12 @@ Open Verify Page
     #pindah ke session dibrowser yang sama
     # Wait Until Location Contains    Very\ Email    20s
     Wait Until Location Contains    ${VERIFY_EMAIL_URL}    10s
+
+
+#Email sudah terdaftar
+Verify Email already exist
+
+    Wait Until Page Contains    
+    ...    Email already registered 
+    ...    20s
+    #Capture Page Screenshot

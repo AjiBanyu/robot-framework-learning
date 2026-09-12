@@ -4,8 +4,6 @@ Library  SeleniumLibrary
 Resource  ../locators/login_locators.robot
 Resource  ../variables/login_data.robot
 Resource  ../variables/environment.robot
-Resource  ../locators/forgot_password_locators.robot
-Resource  ../locators/register_locators.robot
 
 *** Keywords ***
 
@@ -23,10 +21,6 @@ Input Password
     [Arguments]    ${password}
     Input Text    ${PASSWORD_FIELD}  ${password}
 
-Click Forgot Password
-
-    Click Element    ${FORGOT_PASSWORD}    
-
 
 Click Login Button
 
@@ -38,7 +32,7 @@ Verify Dashboard
 
     #Capture Page Screenshot
      Wait Until Location Contains   
-     ...    ${DASHBOARD_URL}  
+     ...    ${PURCHASE_REQUEST_URL}  
      ...    20s
 
 #Credential salah/tidak valid/tidak terdaftar
@@ -48,19 +42,3 @@ Verify Login Failed
     ...    Invalid Credential   
     ...    20s
     #Capture Page Screenshot
-
-#Input Field Kosong
-Verify Required Field Error
-
-    [Arguments]   ${email_message}=${EMPTY}  ${password_message}=${EMPTY}
-     
-    #cek kondisi field email 
-    IF    $email_message != ""
-        Wait Until Page Contains   ${email_message}   20s   
-    END
-
-    #cek kondisi field password
-    IF    $password_message != ""
-        Wait Until Page Contains   ${password_message}   20s   
-    END
-    
